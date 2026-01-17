@@ -1,0 +1,46 @@
+{
+  "use_multitf_training": true,
+  "use_multitf_inference": true,
+  "use_multitf_regimes": true,
+
+  "enable_strategy_features": true,
+  "enable_regime_features": true,
+  "enable_volume_features": true,
+  "enable_volatility_features": true,
+
+  "enable_feature_normalization": true,
+  "enable_feature_clipping": true,
+  "feature_clip_bounds": [-5.0, 5.0],
+
+  "enable_label_smoothing": false,
+  "label_smoothing_alpha": 0.1,
+
+  "enable_error_weighting": true,
+  "enable_recency_weighting": true,
+
+  "enable_hyperparam_variants": true,
+  "enable_strategy_augmented_experiments": true,
+
+  "enable_live_predictions": true,
+  "enable_live_error_tracking": true,
+  "enable_live_regime_tracking": true,
+
+  "enable_drift_score_smoothing": true,
+  "drift_smoothing_alpha": 0.2,
+
+  "enable_minion_health_decay": true,
+  "minion_health_decay_rate": 0.98,
+
+  "enable_guardrail_soft_failures": true,
+  "enable_guardrail_hard_failures": true,
+
+  "enable_survivability_soft_mode": true,
+  "enable_survivability_hard_mode": true,
+
+  "enable_telemetry_minified": false,
+  "enable_telemetry_full": true,
+
+  "debug_feature_shapes": false,
+  "debug_minion_outputs": false,
+  "debug_guardrail_filters": false
+}

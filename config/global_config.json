@@ -1,0 +1,84 @@
+{
+  "environment": "live",
+  "primary_symbol": "BTCUSD",
+
+  "loop_interval_seconds": 1.0,
+
+  "paths": {
+    "symbols": "config/symbols.json",
+    "feeds": "config/feeds.json",
+    "ml_orchestrator": "config/MLOrchestrator.json",
+    "guardrails": "config/guardrails.json",
+    "control": "config/control.json",
+    "switches": "config/switches.json",
+    "health_monitor": "config/health_monitor.json"
+  },
+
+  "logging": {
+    "level": "INFO",
+    "file": "logs/live.log",
+
+    "rotate": true,
+    "max_size_mb": 200,
+    "backup_count": 20,
+
+    "structured": true,
+    "utc_timestamps": true,
+
+    "retention": {
+      "max_days": 30,
+      "max_total_mb": 2048
+    },
+
+    "environments": {
+      "live": {
+        "level": "INFO",
+        "file": "logs/live.log",
+        "debug_mode": false
+      },
+      "paper": {
+        "level": "DEBUG",
+        "file": "logs/paper.log",
+        "debug_mode": true
+      },
+      "dev": {
+        "level": "DEBUG",
+        "file": "logs/dev.log",
+        "debug_mode": true
+      }
+    }
+  },
+
+  "telemetry": {
+    "enabled": true,
+    "endpoint": "http://localhost:5000/telemetry",
+    "batch_interval_seconds": 5,
+    "max_batch_size": 500,
+    "flush_on_shutdown": true
+  },
+
+  "order_router": {
+    "type": "mt4_bridge",
+    "host": "127.0.0.1",
+    "port": 20000,
+    "timeout_seconds": 2.0,
+
+    "max_queue_size": 1000,
+    "retry_on_failure": true,
+    "retry_backoff_seconds": 1.0
+  },
+
+  "bridge_health": {
+    "enable_bridge_health_checks": true,
+    "heartbeat_interval_seconds": 5,
+    "heartbeat_grace_seconds": 20,
+    "require_execution_sync": true,
+    "require_market_data_sync": true
+  },
+
+  "ml_lineage": {
+    "enabled": true,
+    "registry_path": "models/lineage/registry.json",
+    "active_model_policy": "latest_approved"
+  }
+}

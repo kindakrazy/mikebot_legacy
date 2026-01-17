@@ -1,0 +1,90 @@
+{
+  "BTCUSD": {
+    "enabled": true,
+    "description": "Bitcoin vs US Dollar",
+    "pip_size": 0.01,
+    "min_lot": 0.01,
+    "max_lot": 10.0,
+    "lot_step": 0.01,
+
+    "timeframes": [
+      "M1",
+      "M5",
+      "M15"
+    ],
+
+    "feature_builder": {
+      "include_volume": true,
+      "include_volatility": true,
+      "include_regime": true,
+      "include_strategy_signals": true,
+      "max_candles": 5000
+    },
+
+    "ml": {
+      "use_multitf": true,
+      "label_horizon": 1,
+      "label_type": "directional",
+      "normalize_features": true
+    }
+  },
+
+  "ETHUSD": {
+    "enabled": true,
+    "description": "Ethereum vs US Dollar",
+    "pip_size": 0.01,
+    "min_lot": 0.01,
+    "max_lot": 10.0,
+    "lot_step": 0.01,
+
+    "timeframes": [
+      "M1",
+      "M5",
+      "M15"
+    ],
+
+    "feature_builder": {
+      "include_volume": true,
+      "include_volatility": true,
+      "include_regime": true,
+      "include_strategy_signals": true,
+      "max_candles": 5000
+    },
+
+    "ml": {
+      "use_multitf": true,
+      "label_horizon": 1,
+      "label_type": "directional",
+      "normalize_features": true
+    }
+  },
+
+  "XAUUSD": {
+    "enabled": false,
+    "description": "Gold vs US Dollar",
+    "pip_size": 0.1,
+    "min_lot": 0.01,
+    "max_lot": 50.0,
+    "lot_step": 0.01,
+
+    "timeframes": [
+      "M5",
+      "M15"
+    ],
+
+    "feature_builder": {
+      "include_volume": false,
+      "include_volatility": true,
+      "include_regime": true,
+      "include_strategy_signals": true,
+      "max_candles": 3000
+    },
+
+    "ml": {
+      "use_multitf": true,
+      "label_horizon": 1,
+      "label_type": "directional",
+      "normalize_features": true
+    }
+  }
+}

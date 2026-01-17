@@ -1,0 +1,13 @@
+{
+  "environment": "live",
+  "include": [
+    "config/global_config.json",
+    "config/symbols.json",
+    "config/feeds.json",
+    "config/MLOrchestrator.json",
+    "config/guardrails.json",
+    "config/control.json",
+    "config/switches.json",
+    "config/health_monitor.json"
+  ]
+}

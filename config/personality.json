@@ -1,0 +1,41 @@
+{
+  "default": "neutral",
+  "personalities": {
+    "neutral": {
+      "name": "neutral",
+      "aggression": 1.0,
+      "caution": 1.0,
+      "confidence_weight": 1.0,
+      "noise_tolerance": 0.5,
+      "regime_sensitivity": 1.0,
+      "allow_evolution": true
+    },
+    "aggressive": {
+      "name": "aggressive",
+      "aggression": 1.6,
+      "caution": 0.8,
+      "confidence_weight": 1.2,
+      "noise_tolerance": 0.7,
+      "regime_sensitivity": 1.4,
+      "allow_evolution": true
+    },
+    "conservative": {
+      "name": "conservative",
+      "aggression": 0.7,
+      "caution": 1.4,
+      "confidence_weight": 0.8,
+      "noise_tolerance": 0.3,
+      "regime_sensitivity": 0.8,
+      "allow_evolution": true
+    },
+    "scout": {
+      "name": "scout",
+      "aggression": 1.2,
+      "caution": 0.9,
+      "confidence_weight": 1.5,
+      "noise_tolerance": 0.6,
+      "regime_sensitivity": 1.8,
+      "allow_evolution": true
+    }
+  }
+}

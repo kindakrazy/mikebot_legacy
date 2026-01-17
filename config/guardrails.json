@@ -1,0 +1,25 @@
+{
+  "enabled": true,
+  "ai_master": true,
+
+  "max_symbol_exposure_fraction": 0.20,
+  "max_total_exposure_fraction": 0.50,
+
+  "nudge_symbol_exposure_fraction": 0.15,
+  "nudge_total_exposure_fraction": 0.40,
+
+  "min_lot": 0.01,
+  "max_lot": 50.0,
+
+  "enable_nudging": true,
+  "enable_vol_nudging": true,
+  "vol_nudge_threshold": 2.0,
+
+  "cautious_sessions": ["asia"],
+  "blocked_sessions": [],
+
+  "min_stop_distance_pct": 0.002,
+  "max_stop_distance_pct": 0.10,
+
+  "require_bridge_alive": true
+}

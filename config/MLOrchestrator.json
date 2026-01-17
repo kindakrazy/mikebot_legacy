@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MLOrchestrator v4 Schema",
+  "type": "object",
+
+  "properties": {
+    "engines": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+
+    "drift_threshold": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+
+    "retrain_min_samples": {
+      "type": "integer",
+      "minimum": 1
+    },
+
+    "retrain_min_interval_hours": {
+      "type": "number",
+      "minimum": 0.0
+    },
+
+    "minion_weights": {
+      "type": "object",
+      "additionalProperties": { "type": "number" }
+    },
+
+    "personality": {
+      "type": "object"
+    },
+
+    "regime_switcher": {
+      "type": "object"
+    },
+
+    "knowledge_graph": {
+      "type": "object"
+    }
+  },
+
+  "required": [
+    "engines",
+    "drift_threshold",
+    "retrain_min_samples",
+    "retrain_min_interval_hours"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "primary_feed": "mt4",
+
+  "feeds": {
+    "mt4": {
+      "type": "mt4_bridge",
+      "enabled": true,
+      "symbols": ["BTCUSD", "ETHUSD"],
+      "timeframes": ["M1", "M5", "M15"],
+      "connection": {
+        "host": "127.0.0.1",
+        "port": 19999,
+        "timeout_seconds": 2.0
+      },
+      "heartbeat": {
+        "enabled": true,
+        "interval_seconds": 1.0,
+        "max_missed": 5
+      }
+    },
+
+    "simulation": {
+      "type": "historical_csv",
+      "enabled": false,
+      "symbols": ["BTCUSD"],
+      "timeframes": ["M1", "M5", "M15"],
+      "paths": {
+        "BTCUSD": "data/BTCUSD.csv"
+      },
+      "options": {
+        "loop": false,
+        "speed_multiplier": 1.0
+      }
+    },
+
+    "binance": {
+      "type": "binance_ws",
+      "enabled": false,
+      "symbols": ["BTCUSDT", "ETHUSDT"],
+      "timeframes": ["1m", "5m", "15m"],
+      "connection": {
+        "api_key": "",
+        "api_secret": "",
+        "ws_url": "wss://stream.binance.com:9443/ws"
+      },
+      "heartbeat": {
+        "enabled": true,
+        "interval_seconds": 1.0,
+        "max_missed": 3
+      }
+    }
+  }
+}
